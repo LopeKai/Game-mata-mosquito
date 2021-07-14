@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    cursor: url("../imagens/mata_mosca.png") 30 30, auto;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../imagens/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes movi {
+    0% {
+        transform: translateX(-3px) translateY(-3px);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(-3px) translateY(-3px);
+    }
+}
+
+.imgFly {
+    animation-name: movi;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.mosquito1 {
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito2 {
+    width: 70px;
+    height: 70px;
+}
+
+.mosquito3 {
+    width: 90px;
+    height: 90px;
+}
+
+.ladoA {
+    transform: scaleX(1);
+}
+
+.ladoB {
+    transform: scaleX(-1);
+}
+
+.panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    background-color: #fff;
+    padding: 10px 15px;
+    opacity: 0.7;
+    border-top-right-radius: 4px;
+}
+
+.time {
+    margin-top: 10px;
+}
+
+.panel .time p {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.panel .time p span {
+    color: red;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.button {
+    position: relative;
+    width: 200px;
+    transform: skewX(-10deg);
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1px;
+    transition: 400ms ease;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    border-radius: 10px;
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432);
+}
+
+.button:hover {
+    transform: skewX(-10deg) scale(1.09);
+}
+
+.button1 {
+    background: #f00000;
+    background: -webkit-linear-gradient(to right, #dc281e, #f00000);
+    background: linear-gradient(to right, #dc281e, #f00000);
+    border-bottom: 3px solid #961a13;
+    margin-top: 10px;
+}
+
+.button1:hover {
+    transform: translateY(-5px);
+}
+
+.button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20%;
+    height: 60%;
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+    border-radius: 4px;
+    opacity: 0;
+    transition: 400ms ease;
+}
+.button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20%;
+    height: 60%;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-radius: 4px;
+    opacity: 0;
+    transition: 400ms ease;
+}
+
+.button:hover::before,
+.button:hover::after {
+    opacity: 1;
+}
+
+.select {
+    background-color: #fff;
+    width: 220px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.select option {
+    color: rgb(27, 26, 26);
+    letter-spacing: 0.6px;
+}

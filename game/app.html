@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<htm lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mata Mosquito</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="../style/style.css">
+        <script src="../script/game.js"></script>
+    </head>
+
+    <body onresize="sizeBody()">
+        <div class="panel">
+            <div class="lives">
+                <img id="live1" src="../imagens/coracao_cheio.png" alt="Coração cheio">
+                <img id="live2" src="../imagens/coracao_cheio.png" alt="Coração cheio">
+                <img id="live3" src="../imagens/coracao_cheio.png" alt="Coração cheio">
+            </div>
+            <div class="time">
+                <p>Tempo restante: <span id="stopwatch"></span></p>
+            </div>
+        </div>
+        <script>
+            document.getElementById('stopwatch').innerHTML = time
+            var fly = setInterval(function () {
+                createFly()
+            }, difficultyGame)
+        </script>
+    </body>
+</htm>
